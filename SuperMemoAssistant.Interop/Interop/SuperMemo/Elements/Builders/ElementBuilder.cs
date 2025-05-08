@@ -156,7 +156,7 @@ namespace SuperMemoAssistant.Interop.SuperMemo.Elements.Builders
     public int? ParentId
     {
       get => _parentId;
-      private set => _parentId = value.HasValue ? Math.Max(1, value.Value) : null;
+      private set => _parentId = value.HasValue ? (int?)Math.Max(1, value.Value) : null;
     }
 
     /// <summary>Determines the element's parent element -- a.k.a which branch should this element belong to</summary>
